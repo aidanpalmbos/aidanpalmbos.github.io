@@ -1,0 +1,93 @@
+html {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+body {
+    width: 100%;
+    margin: 0;
+    background-color: #effcfb;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #d5f5f2;
+    padding: 0.5em 1.2em;
+}
+
+#headerName {
+    display: flex;
+    flex-direction: column;
+}
+#headerName > h1 {
+    margin: 0;
+}
+#headerName > h2 {
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+}
+
+#headerLinks > a {
+    margin: 0 0.5em;
+    font-size: 1.2em;
+}
+#headerSmallMenu {
+    display: none;
+}
+
+#headerSubMenu {
+    position: fixed;
+    top: 6.2em;
+    left: 0;
+    width: 100%;
+    padding-left: 6.75vw;
+    border-bottom: 4px solid #d5f5f2;
+    background-color: #effcfb;
+}
+
+.headerSubMenuOn {
+    display: flex;
+    flex-direction: column;
+    animation-name: showHeaderSubMenu;
+    animation-duration: .25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.headerSubMenuOff {
+    animation-name: hideHeaderSubMenu;
+    animation-duration: .25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes showHeaderSubMenu {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes hideHeaderSubMenu {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    #headerLinks {
+        display: none;
+    }
+
+    #headerSmallMenu {
+        display: inherit
+    }
+}
