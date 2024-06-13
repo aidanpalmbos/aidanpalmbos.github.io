@@ -1,16 +1,15 @@
 var phoneMenuOn = false;
-function toggleHeaderSubMenu(id) {
+function toggleHeaderSubMenu(button) {
     let subMenu = document.getElementById("headerSubMenu");
-    let button = document.getElementById(id);
     phoneMenuOn = !phoneMenuOn;
     if (phoneMenuOn) {
         subMenu.classList.add("headerSubMenuOn");
         subMenu.classList.remove("headerSubMenuOff");
-        button.textContent = "x"
+        button.classList.toggle("buttonOn");
     }
     else {
         subMenu.classList.add("headerSubMenuOff");
         subMenu.classList.remove("headerSubMenuOn");
-        button.textContent = "?";
+        button.classList.toggle("buttonOn");
     }
 }

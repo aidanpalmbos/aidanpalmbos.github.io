@@ -11,6 +11,7 @@
     <script type="text/javascript" src="scripts/menu.js"></script>
 </head>
     <body>
+
         <header>
             <div id="headerName">
                 <h1>Aidan Palmbos</h1>
@@ -22,7 +23,12 @@
                 <a>Link 3</a>
             </div>
             <div id="headerSmallMenu">
-                <p id="headerSubMenuButton" onclick="toggleHeaderSubMenu(this.id);">?</p>
+                <!--p id="headerSubMenuButton" onclick="toggleHeaderSubMenu(this.id);">?</!-->
+                <div id="headerSubMenuButton" onclick="toggleHeaderSubMenu(this);">
+                    <div id="topBar"></div>
+                    <div id="middleBar"></div>
+                    <div id="bottomBar"></div>
+                </div>
                 <div id="headerSubMenu" class="headerSubMenuOff">
                     <a>Link 1</a>
                     <a>Link 2</a>
@@ -30,8 +36,10 @@
                 </div>
             </div>
         </header>
+
         <main>
 
         </main>
+    
     </body>
 </html>

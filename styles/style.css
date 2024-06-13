@@ -32,20 +32,43 @@ header {
 
 #headerLinks > a {
     margin: 0 0.5em;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 #headerSmallMenu {
     display: none;
 }
 
 #headerSubMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     position: fixed;
-    top: 6.2em;
+    top: 4.6em;
     left: 0;
     width: 100%;
-    padding-left: 6.75vw;
     border-bottom: 4px solid #d5f5f2;
     background-color: #effcfb;
+    font-size: 1.3em;
+}
+
+#headerSubMenuButton {
+    cursor: pointer;
+}
+#topBar, #middleBar, #bottomBar {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.buttonOn #topBar {
+    transform: translate(0, 2px) rotate(-135deg);
+}
+.buttonOn #middleBar {
+    display: none;
+}
+.buttonOn #bottomBar {
+    transform: translate(0, -9px) rotate(135deg);
 }
 
 .headerSubMenuOn {
@@ -61,6 +84,9 @@ header {
     animation-duration: .25s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+}
+.headerSubMenuOff > * {
+    display: none;
 }
 @keyframes showHeaderSubMenu {
     0% {
