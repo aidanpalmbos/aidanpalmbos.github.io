@@ -1,28 +1,39 @@
 html {
-    font-family: "Poppins", sans-serif;
+    font-family: "IBM Plex Mono", monospace;
     font-weight: 300;
     font-style: normal;
+    width: 100%;
 }
 body {
     width: 100%;
     margin: 0;
-    background-color: #effcfb;
+    color: white;
+    /*background-color: #413f47;*/
+    background: rgb(14,38,20);
+    background: linear-gradient(90deg, rgba(14,38,20,1) 0%, rgba(0,0,0,1) 50%, rgba(14,38,20,1) 100%);
 }
 header {
     display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0.25em 0 0.25em 0;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 4px solid #d5f5f2;
-    padding: 0.5em 1.2em;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(50,50,50,1) 50%, rgba(0,0,0,1) 100%);
+    border-bottom: 4px solid #60d662;
 }
 
 #headerName {
     display: flex;
     flex-direction: column;
+    margin-left: 1em;
 }
 #headerName > h1 {
     margin: 0;
+    font-size: 2.25em;
 }
 #headerName > h2 {
     margin: 0;
@@ -30,25 +41,30 @@ header {
     font-weight: normal;
 }
 
+#headerLinks {
+    margin-right: 1em;
+}
 #headerLinks > a {
     margin: 0 0.5em;
     font-size: 1.3em;
 }
+
 #headerSmallMenu {
     display: none;
+    margin-right: 1em;
 }
-
 #headerSubMenu {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: fixed;
-    top: 4.6em;
+    top: 4.2em;
     left: 0;
     width: 100%;
-    border-bottom: 4px solid #d5f5f2;
-    background-color: #effcfb;
     font-size: 1.3em;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(50,50,50,1) 50%, rgba(0,0,0,1) 100%);
+    border-bottom: 4px solid #60d662;
 }
 
 #headerSubMenuButton {
@@ -57,7 +73,7 @@ header {
 #topBar, #middleBar, #bottomBar {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: #60d662;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -116,4 +132,27 @@ header {
     #headerSmallMenu {
         display: inherit
     }
+}
+@media screen and (max-width: 385px) {
+    #headerName > h1 {
+        font-size: 2em;
+    }
+    #headerSubMenu {
+        top: 3.9em;
+    }
+}
+
+main {
+    margin-top: 7em;
+    padding: 1em;
+}
+
+#headerLinks > a, #headerSubMenu > a {
+    text-decoration: none;
+}
+a:link {
+    color: #0eb2af;
+}
+a:visited {
+    color: #9c0eb2;
 }

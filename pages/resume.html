@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aidan Palmbos Digital Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/resume.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script type="text/javascript" src="../scripts/menu.js"></script>
+    <script type="text/javascript" src="../scripts/resume.js"></script>
+</head>
+<body onload="PDFDisabled()">
+
+    <header>
+        <div id="headerName">
+            <h1>Aidan Palmbos</h1>
+            <h2>Digital Portfolio</h2>
+        </div>
+        <div id="headerLinks">
+            <a href="../index.html">Home</a>
+            <a href="resume.html">Resume</a>
+        </div>
+        <div id="headerSmallMenu">
+            <div id="headerSubMenuButton" onclick="toggleHeaderSubMenu(this);">
+                <div id="topBar"></div>
+                <div id="middleBar"></div>
+                <div id="bottomBar"></div>
+            </div>
+            <div id="headerSubMenu" class="headerSubMenuOff">
+                <a href="../index.html">Home</a>
+                <a href="resume.html">Resume</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>My Resume</h1>
+        <a id="PDFOff" href="Resume.pdf" target="_blank" style="display: none" download>View Resume Here</a>
+        <iframe id="PDFOn" src="Resume.pdf#zoom=100" type="application/pdf" />
+    </main>
+
+</body>
+</html>

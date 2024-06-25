@@ -5,41 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <script type="text/javascript" src="scripts/menu.js"></script>
 </head>
-    <body>
+<body>
 
-        <header>
-            <div id="headerName">
-                <h1>Aidan Palmbos</h1>
-                <h2>Digital Portfolio</h2>
+    <header>
+        <div id="headerName">
+            <h1>Aidan Palmbos</h1>
+            <h2>Digital Portfolio</h2>
+        </div>
+        <div id="headerLinks">
+            <a href="index.html">Home</a>
+            <a href="pages/resume.html">Resume</a>
+        </div>
+        <div id="headerSmallMenu">
+            <div id="headerSubMenuButton" onclick="toggleHeaderSubMenu(this);">
+                <div id="topBar"></div>
+                <div id="middleBar"></div>
+                <div id="bottomBar"></div>
             </div>
-            <div id="headerLinks">
-                <a>Link 1</a>
-                <a>Link 2</a>
-                <a>Link 3</a>
+            <div id="headerSubMenu" class="headerSubMenuOff">
+                <a href="index.html">Home</a>
+                <a href="pages/resume.html">Resume</a>
             </div>
-            <div id="headerSmallMenu">
-                <!--p id="headerSubMenuButton" onclick="toggleHeaderSubMenu(this.id);">?</!-->
-                <div id="headerSubMenuButton" onclick="toggleHeaderSubMenu(this);">
-                    <div id="topBar"></div>
-                    <div id="middleBar"></div>
-                    <div id="bottomBar"></div>
-                </div>
-                <div id="headerSubMenu" class="headerSubMenuOff">
-                    <a>Link 1</a>
-                    <a>Link 2</a>
-                    <a>Link 3</a>
-                </div>
-            </div>
-        </header>
+        </div>
+    </header>
 
-        <main>
-
-        </main>
+    <main>
+        <h1>Aidan Palmbos</h1>
+        <h2>Versatile developer of all types,<br />with a large interest in Machine Learning</h2>
+        <h3>Years of experience and learning in all places:</h3>
+        <div id="experienceParent" class="flexContainer">
+            <div class="experienceChild">
+                <h1>Work</h1>
+                <h2>Over a year working on various projects as a Software Engineer for <a href="https://highlightindustries.com/">Highlight Industries</a>.</h2>
+            </div>
+            <div class="experienceChild">
+                <h1>School</h1>
+                <h2>Studying for Bachelor of Computer Science with Specialty in AI: Senior at <a href="https://www.davenport.edu/">Davenport University</a>.</h2>
+            </div>
+            <div class="experienceChild">
+                <h1>Self Taught</h1>
+                <h2>Many years learning different concepts through experiementation and tutorials.</h2>
+            </div>
+            <div class="experienceChild">
+                <h1>Clubs</h1>
+                <h2>I've joined different clubs featuring programming, such as <a href="https://bpa.org/">BPA</a> and <a href="https://www.vexrobotics.com/">Robotics</a>.</h2>
+            </div>
+        </div>
+    </main>
     
-    </body>
+</body>
 </html>
